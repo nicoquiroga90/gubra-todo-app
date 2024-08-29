@@ -5,11 +5,13 @@ export default function CreateTodo({ handleSaveTodo }) {
   const characterLimit = 250;
 
   const handleTodoChange = (e) => {
-    if (e.target.value.length > characterLimit)
+    if (e.target.value.length > characterLimit) {
       alert(
         "🚧 You have reached the character limit 🚧 \nYou can save your note and continue in a new one 🎯"
       );
-    else setTodoText(e.target.value);
+    } else {
+      setTodoText(e.target.value);
+    }
   };
 
   return (
@@ -24,7 +26,10 @@ export default function CreateTodo({ handleSaveTodo }) {
       />
       <div className="flex gap-10 justify-between items-center font-roboto">
         <small>{characterLimit - noteText.length} remaining</small>
-        <button className="save" onClick={() => handleSaveTodo(noteText)}>
+        <button
+          className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-8 rounded-full shadow-md transition-all duration-300 ease-in-out"
+          onClick={() => handleSaveTodo(noteText)}
+        >
           Save
         </button>
       </div>

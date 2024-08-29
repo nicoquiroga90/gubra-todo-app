@@ -36,7 +36,7 @@ export default function TodoPage() {
     };
 
     const handleToggleDone = async (id, currentDoneStatus) => {
-        const newDoneStatus = !currentDoneStatus; // Cambia el estado de done al contrario
+        const newDoneStatus = !currentDoneStatus;
         try {
             const updatedTodo = await updateTodoDone(id, newDoneStatus);
             setTodos(prev => prev.map(todo => (todo.id === id ? updatedTodo : todo)));
