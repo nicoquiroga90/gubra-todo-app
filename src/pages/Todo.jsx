@@ -3,7 +3,7 @@ import CreateTodo from "../components/CreateTodo";
 import Todo from "../components/Todo";
 import Search from "../components/Search";
 
-export default function Todo() {
+export default function TodoPage() {
     const [todos, setTodo] = useState([])
     const [search, setSearch] = useState("")
 
@@ -19,7 +19,7 @@ export default function Todo() {
             <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
                 {todos.length === 0 ? (
                 <div className="empty-todos-wrapper">
-                    You don't have any todos yet...
+                    You don't have any To Do yet...
                 </div>) : (
                     todos
                     .filter(n => n.text.includes(search))
