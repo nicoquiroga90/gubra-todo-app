@@ -8,7 +8,7 @@ export default function Home () {
             </h1>
              <p className="text-lg text-gray-800 max-w-md text-center mb-8 
                 sm:text-base md:text-lg  xl:text-2xl">
-                Create, edit, organize and save your To Do list here!
+                Create, organize and save your To Do list here!
             </p>
             <Link to="/todo" className="bg-yellow-400 text-gray-900 px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-yellow-500 transition">
                 View Todo

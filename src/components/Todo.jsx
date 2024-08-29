@@ -20,7 +20,7 @@ export default function Todo({ text, date, done, onUpdate }) {
                     onClick={handleClick} 
                     className={buttonClasses}
                 >
-                    {done ? 'Completed ✅' : 'Pending ⚠️'}
+                    {done ? 'Completed 🎉' : 'Pending ❗'}
                 </button>
             </div>
         </div>
