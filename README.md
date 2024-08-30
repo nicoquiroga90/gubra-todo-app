@@ -5,7 +5,7 @@ Front end of the To-Do app for Gubra, using React + Tailwind.
 ## Clone the project
 
 ```
-git clone https://github.com/Gubra-A-S/fastapi-todo-app.git
+git clone https://github.com/nicoquiroga90/gubra-todo-app
 ```
 
 ## Install dependencies
