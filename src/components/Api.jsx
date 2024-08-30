@@ -1,7 +1,13 @@
 const API_URL = 'http://127.0.0.1:8000/todos';
 
+const getToken = () => localStorage.getItem('access_token');
+
 export async function getTodos() {
-    const response = await fetch(API_URL);
+    const response = await fetch(API_URL, {
+        headers: {
+            'Authorization': `Bearer ${getToken()}`,
+        },
+    });
     if (!response.ok) throw new Error('Error fetching todos');
     return await response.json();
 }
@@ -11,6 +17,7 @@ export async function createTodo(newTodo) {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
+            'Authorization': `Bearer ${getToken()}`,
         },
         body: JSON.stringify(newTodo),
     });
@@ -23,6 +30,7 @@ export async function updateTodoDone(id, doneStatus) {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
+            'Authorization': `Bearer ${getToken()}`,
         },
     });
 
@@ -34,4 +42,3 @@ export async function updateTodoDone(id, doneStatus) {
 
     return await response.json();
 }
-

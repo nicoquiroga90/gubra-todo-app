@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { getTodos, createTodo, updateTodoDone } from "../components/Api";
 import CreateTodo from "../components/CreateTodo";
-import Todo from "../components/Todo";
+import Status from "../components/Status";
 import Search from "../components/Search";
 
 export default function TodoPage() {
@@ -58,7 +58,7 @@ export default function TodoPage() {
                     todos
                         .filter(todo => todo.content.includes(search))
                         .map(todo => (
-                            <Todo
+                            <Status
                                 key={todo.id}
                                 text={todo.content}
                                 date={new Date(todo.due)}

@@ -20,15 +20,18 @@ export default function CreateTodo({ handleSaveTodo }) {
         cols="10"
         rows="8"
         className="bg-transparent placeholder-gray-700 text-gray-800 w-full outline-none font-poppins"
-        placeholder="Type your note"
+        placeholder="Type your task"
         value={noteText}
         onChange={handleTodoChange}
       />
       <div className="flex gap-10 justify-between items-center font-roboto">
         <small>{characterLimit - noteText.length} remaining</small>
         <button
-          className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-8 rounded-full shadow-md transition-all duration-300 ease-in-out"
+          className={`bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-8 rounded-full shadow-md transition-all duration-300 ease-in-out ${
+            noteText.trim() === "" ? "opacity-50 cursor-not-allowed" : ""
+          }`}
           onClick={() => handleSaveTodo(noteText)}
+          disabled={noteText.trim() === ""}
         >
           Save
         </button>

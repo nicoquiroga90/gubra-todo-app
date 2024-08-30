@@ -1,5 +1,3 @@
-
-
 export default function Search ( { handleSearchChange }) {
     return (
         <div className="flex gap-3 bg-[#e9e9e9] rounded-lg p-2 items-start">
