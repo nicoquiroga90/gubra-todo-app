@@ -52,7 +52,7 @@ export default function TodoPage() {
             <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
                 {todos.length === 0 ? (
                     <div className="empty-todos-wrapper">
-                        You don't have any To Do yet...
+                        You don't have any To-Do yet...
                     </div>
                 ) : (
                     todos
