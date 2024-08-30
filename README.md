@@ -1,6 +1,6 @@
 # Gubra To-Do App 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Front end of the To-Do app for Gubra, using React + Tailwind. 
 
 ## Clone the project
 
@@ -25,9 +25,16 @@ The page will reload when you make changes.
 ## Screenshot:
 
 ### Landing Page
-![Home](ToDo Home.png)
+![Home](ToDoHome.png)
 
 ### App
-![Home](ToDo Gubra.png)
+![Home](ToDoGubra.png)
 
 
+## Backend
+
+The backend of the app can be found in the following PR: [Backend To-Do](https://github.com/Gubra-A-S/fastapi-todo-app/pull/1).
+
+## Login/Authorization
+
+To access the app, a username/password is required, which can be set in the backend. I recommend checking the PR with the documentation.
